@@ -33,7 +33,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 5px;
   text-align: center;
 }
 
@@ -116,6 +115,24 @@ ul li {
   transform: translateY(-8px);
 }
 
+footer{
+  padding: 10px;
+}
+
+footer p, footer h3{
+  text-align: left;
+  padding: 10px;
+}
+
+footer section{
+  margin: 5px auto;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 768px) {
   #toggle {
     display: none;
@@ -131,5 +148,10 @@ ul li {
   }
   .menu li {
     margin: 0 12px;
+  }
+  footer{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
   }
 }

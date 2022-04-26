@@ -1,10 +1,6 @@
-#index_main {
-  flex: 1 1;
-  flex-direction: column;
-  width: 100%;
-  min-height: 80vh;
+h1{
+  margin: 40px;
 }
-
 #general_info {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));

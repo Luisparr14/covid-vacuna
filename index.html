@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vacuna Covid</title>
+    <meta
+      name="description"
+      content="Esta pagina muestra la informacion general de la vacunación contra el Covid-19 en Colombia"
+    />
+    <meta name="author" content="Luis Angel Parra Meza" />
+    <title>Vacunación Covid-19 - Colombia</title>
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./global.css" />
     <script defer src="./js/generators.js"></script>
@@ -15,101 +20,115 @@
       <a id="logo" href="/"> Vacuna COVID-19 </a>
       <ul class="menu">
         <li class="item"><a href="/">Datos generales</a></li>
-        <li class="item"><a href="departamentos.html">Datos por departamento</a></li>
-        <li class="item"><a href="grafico.html">Grafico</a></li>        
+        <li class="item">
+          <a href="departamentos.html">Datos por departamento</a>
+        </li>
+        <li class="item"><a href="grafico.html">Grafico</a></li>
       </ul>
       <div id="toggle">
-        <span ></span>
+        <span></span>
       </div>
     </nav>
-    <div class="container">
-      <main id="index_main">
-        <header id="main_header">
-          <h1 class="main_title">Vacunación COVID-19 - Colombia</h1>
-        </header>
-        <section id="general_info">
-          <div class="card">
-            <section class="body_card">
-              <div>
-                <h2 class="card_title">Dosis distribuidas</h2>
-                <h4>82.791.874</h4>
-              </div>
-              <div>
-                <small>
-                  <span>
-                    <figure>
-                      <img
-                        src="http://127.0.0.1:5500/public/images/sinovac-logo.webp"
-                      />
-                    </figure>
-                  </span>
-                  <span>23.788.770</span>
-                </small>
-                <small>
-                  <span>
-                    <figure>
-                      <img
-                        src="http://127.0.0.1:5500/public/images/pfizer-logo.webp"
-                      />
-                    </figure>
-                  </span>
-                  <span>23.067.708</span>
-                </small>
-                <small>
-                  <span>
-                    <figure>
-                      <img
-                        src="http://127.0.0.1:5500/public/images/astrazeneca-logo.webp"
-                      />
-                    </figure>
-                  </span>
-                  <span>13.878.596</span>
-                </small>
-                <small>
-                  <span>
-                    <figure>
-                      <img
-                        src="http://127.0.0.1:5500/public/images/moderna-logo.webp"
-                      />
-                    </figure>
-                  </span>
-                  <span>13.514.440</span>
-                </small>
-                <small>
-                  <span>
-                    <figure>
-                      <img
-                        src="http://127.0.0.1:5500/public/images/janssen-logo.webp"
-                      />
-                    </figure>
-                  </span>
-                  <span>8.542.360</span>
-                </small>
-              </div>
-            </section>
-          </div>
-          <div class="card">
-            <section class="body_card">
-              <h2 class="card_title">Dosis Administradas</h2>
-              <h4>51.556.326</h4>
-              <h3>% sobre distribuidas</h3>
-              <h4>62,27 %</h4>
-              <h2 class="card_title">Personas con al menos una dosis</h2>
-              <h4>30.333.359</h4>
-            </section>
-          </div>
-          <div class="card">
-            <section class="body_card">
-              <div>
-                <h2 class="card_title">Personas con esquema completo</h2>
-                <h4>27.904.132</h4>
-                <h3>% sobre administradas</h3>
-                <h4>54,12 %</h4>
-              </div>
-            </section>
-          </div>
-        </section>
-      </main>
-    </div>
+    <main class="container">
+      <header id="main_header">
+        <h1 class="main_title">Vacunación COVID-19 - Colombia</h1>
+      </header>
+      <section id="general_info">
+        <div class="card">
+          <section class="body_card">
+            <div>
+              <h2 class="card_title">Dosis distribuidas</h2>
+              <h4>82.791.874</h4>
+            </div>
+            <div>
+              <small>
+                <span>
+                  <figure>
+                    <img
+                      src="http://127.0.0.1:5500/public/images/sinovac-logo.webp"
+                    />
+                  </figure>
+                </span>
+                <span>23.788.770</span>
+              </small>
+              <small>
+                <span>
+                  <figure>
+                    <img
+                      src="http://127.0.0.1:5500/public/images/pfizer-logo.webp"
+                    />
+                  </figure>
+                </span>
+                <span>23.067.708</span>
+              </small>
+              <small>
+                <span>
+                  <figure>
+                    <img
+                      src="http://127.0.0.1:5500/public/images/astrazeneca-logo.webp"
+                    />
+                  </figure>
+                </span>
+                <span>13.878.596</span>
+              </small>
+              <small>
+                <span>
+                  <figure>
+                    <img
+                      src="http://127.0.0.1:5500/public/images/moderna-logo.webp"
+                    />
+                  </figure>
+                </span>
+                <span>13.514.440</span>
+              </small>
+              <small>
+                <span>
+                  <figure>
+                    <img
+                      src="http://127.0.0.1:5500/public/images/janssen-logo.webp"
+                    />
+                  </figure>
+                </span>
+                <span>8.542.360</span>
+              </small>
+            </div>
+          </section>
+        </div>
+        <div class="card">
+          <section class="body_card">
+            <h2 class="card_title">Dosis Administradas</h2>
+            <h4>51.556.326</h4>
+            <h3>% sobre distribuidas</h3>
+            <h4>62,27 %</h4>
+            <h2 class="card_title">Personas con al menos una dosis</h2>
+            <h4>30.333.359</h4>
+          </section>
+        </div>
+        <div class="card">
+          <section class="body_card">
+            <div>
+              <h2 class="card_title">Personas con esquema completo</h2>
+              <h4>27.904.132</h4>
+              <h3>% sobre administradas</h3>
+              <h4>54,12 %</h4>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <section class="autores">
+        <h3>Autores</h3>
+        <ul>
+          <li>Luis Angel Parra Meza</li>
+          <li>Jhon E. Campo Ladeuth</li>
+          <li>Andres Felipe Burgos</li>
+        </ul>
+      </section>
+      <section class="info">
+        <h3>Información</h3>
+        <p>Pagina para el adelanto del proyecto 40% HTML5 y CSS3</p>
+      </section>
+    </footer>
   </body>
 </html>

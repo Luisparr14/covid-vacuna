@@ -4,9 +4,11 @@ button.addEventListener('click', () => {
   if (button.classList.contains('active')) {
     button.classList.remove('active')
     menu.style.height = '0'
+    enableScroll()
   } else {
     button.classList.add('active')
     menu.style.height = '100%'
+    disableScroll()
   }
 })
 
@@ -20,3 +22,15 @@ window.addEventListener('resize', () => {
     button.classList.remove('active')
   }
 })
+
+function disableScroll() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+function enableScroll() {
+  window.onscroll = function () { };
+}
