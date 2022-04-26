@@ -9,6 +9,7 @@ async function fetchData(url) {
 async function fillTable() {
   let infoVacunas = await fetchData('./data/vacunas.json');
   let tbody = $('tbody');
+  console.log(tbody);
   let html = '';
   infoVacunas.forEach((vacuna) => {
     let departamento = vacuna.departamento;
@@ -39,11 +40,7 @@ async function fillTable() {
 async function cards() {
   const infoVacunas = await fetchData('./data/vacunas.json');
   const infoLabs = await fetchData('./data/laboratorios.json');
-  console.log({
-    infoVacunas,
-    infoLabs,
-  })
-
+  
   let dosisDistribuidas = infoVacunas.reduce((acc, vacuna) => {
     return acc + vacuna.dosisAsignadas;
   }, 0);
@@ -75,7 +72,7 @@ async function cards() {
       <small>
         <span>
         <figure>
-          <img src="${host}/public/images/${lab.laboratorio.toLowerCase()}-logo.webp"/>
+          <img src="./public/images/${lab.laboratorio.toLowerCase()}-logo.webp"/>
         </figure>
         </span>
         <span>${labDosis}</span>
@@ -118,7 +115,9 @@ async function cards() {
     </section>
   </div>`;
 
-
+console.log(htmlCard1);
+console.log(htmlCard2);
+console.log(htmlCard3);
 }
 
 async function graficos() {
@@ -245,5 +244,7 @@ async function graficos() {
   });
 }
 
+// fillTable()
+// cards()
 graficos();
 
