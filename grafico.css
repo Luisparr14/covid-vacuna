@@ -1,0 +1,38 @@
+h1 {
+  margin: 30px;
+}
+
+.container {
+  display: block;
+  padding-bottom: 1.5rem;
+  min-height: auto;
+}
+
+#myChart {
+  margin: auto;  
+  overflow: auto !important;
+  height: 500px !important;
+  width: 1000px !important;
+}
+
+.char_container{
+  overflow: auto;
+}
+
+.aviso{
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #myChart {
+    margin: auto;
+    width: 80vw !important;
+    height: 70vh !important;
+  }
+  .aviso{
+    display: none;
+  }
+  .char_container {
+    position: relative;
+  }
+}
