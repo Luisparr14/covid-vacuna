@@ -9,7 +9,6 @@ async function fetchData(url) {
 async function fillTable() {
   let infoVacunas = await fetchData('./data/vacunas.json');
   let tbody = $('tbody');
-  console.log(tbody);
   let html = '';
   infoVacunas.forEach((vacuna) => {
     let departamento = vacuna.departamento;
@@ -32,7 +31,6 @@ async function fillTable() {
           <td>${totalmenteVacunada}</td>
         </tr>
       `;
-    tbody.innerHTML = html;
   });
   console.log(html);
 }
@@ -244,7 +242,7 @@ async function graficos() {
   });
 }
 
-// fillTable()
-// cards()
+fillTable()
+cards()
 graficos();
 
