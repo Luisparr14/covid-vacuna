@@ -242,7 +242,7 @@ async function graficos() {
   });
 }
 
-fillTable()
-cards()
+// fillTable()
+// cards()
 graficos();
 
