@@ -34,13 +34,3 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () { };
 }
-
-window.onload = () =>{
-  if(window.location.href.includes('index.html')){
-    window.history.pushState(null, null, './');
-  }else if (window.location.href.includes('departamentos.html')){
-    window.history.pushState(null, null, './departamentos');
-  }else if (window.location.href.includes('grafico.html')){
-    window.history.pushState(null, null, './grafico');
-  }
-}

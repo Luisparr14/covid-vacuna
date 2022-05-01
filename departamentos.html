@@ -1,31 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+
+  
+  <!DOCTYPE html>
+  <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Luis Angel Parra Meza" />
-    <title>Vacuna Covid</title>
-    <link rel="stylesheet" href="./departamentos.css" />
-    <link rel="stylesheet" href="./global.css" />
-    <script defer src="./js/generators.js"></script>
-    <script defer src="./js/table.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Esta pagina muestra la informacion de la vacunación contra el Covid-19 en los departamentos de Colombia"
+  />
+  <meta name="author" content="Luis Angel Parra Meza" />
+  <title>Vacunación Covid-19 - Colombia</title>
+  <link rel="stylesheet" href="./departamentos.css" />
+  <link rel="stylesheet" href="./global.css" />
+  <script defer src="./js/cards.js"></script>
+  <script defer src="./js/navbar.js"></script>
   </head>
   <body>
-    <nav id="navbar">
-      <a id="logo" href="index.html"> Vacuna COVID-19 </a>
-      <ul class="menu">
-        <li class="item"><a href="index.html">Datos generales</a></li>
-        <li class="item">
-          <a href="departamentos.html">Datos por departamento</a>
-        </li>
-        <li class="item"><a href="grafico.html">Grafico</a></li>
-      </ul>
-      <div id="toggle">
-        <span></span>
-      </div>
-    </nav>
-    <main class="container">
+  
+  <nav id="navbar">
+<a id="logo" href="index.html"> Vacuna COVID-19 </a>
+<ul class="menu">
+  <li class="item"><a href="index.html">Datos generales</a></li>
+  <li class="item"><a href="departamentos.html">Datos por departamento</a></li>
+  <li class="item"><a href="grafico.html">Grafico</a></li>
+</ul>
+<div id="toggle">
+  <span></span>
+</div>
+</nav>
+  <main class="container">
       <header id="main_header">
         <h1 class="main_title">Vacunación COVID-19 - Departamentos</h1>
       </header>
@@ -43,352 +48,356 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Bogotá</td>
-              <td>14.817.222</td>
-              <td>10.857.681</td>
-              <td>73,28 %</td>
-              <td>64,62 %</td>
-              <td>4.835.247</td>
-              <td>61,19 %</td>
-            </tr>
-          
-            <tr>
-              <td>Antioquia</td>
-              <td>11.746.999</td>
-              <td>6.841.420</td>
-              <td>58,24 %</td>
-              <td>49,93 %</td>
-              <td>3.120.607</td>
-              <td>45,31 %</td>
-            </tr>
-          
-            <tr>
-              <td>Valle Del Cauca</td>
-              <td>7.014.205</td>
-              <td>4.326.398</td>
-              <td>61,68 %</td>
-              <td>48,61 %</td>
-              <td>1.986.202</td>
-              <td>43,28 %</td>
-            </tr>
-          
-            <tr>
-              <td>Cundinamarca</td>
-              <td>4.888.257</td>
-              <td>2.514.988</td>
-              <td>51,45 %</td>
-              <td>36,88 %</td>
-              <td>1.117.690</td>
-              <td>32,13 %</td>
-            </tr>
-          
-            <tr>
-              <td>Santander</td>
-              <td>3.836.943</td>
-              <td>2.814.037</td>
-              <td>73,34 %</td>
-              <td>57,23 %</td>
-              <td>1.251.741</td>
-              <td>53,86 %</td>
-            </tr>
-          
-            <tr>
-              <td>Córdoba</td>
-              <td>2.679.284</td>
-              <td>1.583.796</td>
-              <td>59,11 %</td>
-              <td>44,49 %</td>
-              <td>706.249</td>
-              <td>38,04 %</td>
-            </tr>
-          
-            <tr>
-              <td>Norte De Santander</td>
-              <td>2.531.301</td>
-              <td>1.726.217</td>
-              <td>68,19 %</td>
-              <td>50,07 %</td>
-              <td>775.101</td>
-              <td>46,94 %</td>
-            </tr>
-          
-            <tr>
-              <td>Tolima</td>
-              <td>2.447.524</td>
-              <td>1.612.237</td>
-              <td>65,87 %</td>
-              <td>58,28 %</td>
-              <td>709.605</td>
-              <td>52,68 %</td>
-            </tr>
-          
-            <tr>
-              <td>Nariño</td>
-              <td>2.274.383</td>
-              <td>1.790.886</td>
-              <td>78,74 %</td>
-              <td>51,4 %</td>
-              <td>806.582</td>
-              <td>49,51 %</td>
-            </tr>
-          
-            <tr>
-              <td>Boyacá</td>
-              <td>2.230.333</td>
-              <td>1.664.592</td>
-              <td>74,63 %</td>
-              <td>59,93 %</td>
-              <td>799.146</td>
-              <td>63,44 %</td>
-            </tr>
-          
-            <tr>
-              <td>Atlántico</td>
-              <td>1.978.551</td>
-              <td>1.191.085</td>
-              <td>60,2 %</td>
-              <td>52,54 %</td>
-              <td>1.254.624</td>
-              <td>44,74 %</td>
-            </tr>
-          
-            <tr>
-              <td>Caldas</td>
-              <td>1.906.509</td>
-              <td>1.122.658</td>
-              <td>58,89 %</td>
-              <td>54,2 %</td>
-              <td>471.191</td>
-              <td>45,46 %</td>
-            </tr>
-          
-            <tr>
-              <td>Cesar</td>
-              <td>1.893.903</td>
-              <td>1.164.265</td>
-              <td>61,47 %</td>
-              <td>42,57 %</td>
-              <td>527.126</td>
-              <td>39,29 %</td>
-            </tr>
-          
-            <tr>
-              <td>Risaralda</td>
-              <td>1.752.333</td>
-              <td>1.149.932</td>
-              <td>65,62 %</td>
-              <td>54,34 %</td>
-              <td>529.094</td>
-              <td>54,11 %</td>
-            </tr>
-          
-            <tr>
-              <td>Huila</td>
-              <td>1.717.370</td>
-              <td>1.245.865</td>
-              <td>72,54 %</td>
-              <td>55,91 %</td>
-              <td>537.061</td>
-              <td>47,07 %</td>
-            </tr>
-          
-            <tr>
-              <td>Cauca</td>
-              <td>1.633.193</td>
-              <td>1.162.012</td>
-              <td>71,15 %</td>
-              <td>36,03 %</td>
-              <td>524.300</td>
-              <td>34,58 %</td>
-            </tr>
-          
-            <tr>
-              <td>Meta</td>
-              <td>1.562.968</td>
-              <td>1.021.726</td>
-              <td>65,37 %</td>
-              <td>44,94 %</td>
-              <td>468.075</td>
-              <td>43,31 %</td>
-            </tr>
-          
-            <tr>
-              <td>Sucre</td>
-              <td>1.444.326</td>
-              <td>717.485</td>
-              <td>49,68 %</td>
-              <td>38,11 %</td>
-              <td>328.007</td>
-              <td>33,73 %</td>
-            </tr>
-          
-            <tr>
-              <td>Magdalena</td>
-              <td>1.285.210</td>
-              <td>678.292</td>
-              <td>52,78 %</td>
-              <td>43,38 %</td>
-              <td>543.719</td>
-              <td>37,15 %</td>
-            </tr>
-          
-            <tr>
-              <td>La Guajira</td>
-              <td>1.209.920</td>
-              <td>459.943</td>
-              <td>38,01 %</td>
-              <td>21,68 %</td>
-              <td>221.112</td>
-              <td>22,06 %</td>
-            </tr>
-          
-            <tr>
-              <td>Quindío</td>
-              <td>1.157.949</td>
-              <td>751.792</td>
-              <td>64,92 %</td>
-              <td>61,8 %</td>
-              <td>327.007</td>
-              <td>57,41 %</td>
-            </tr>
-          
-            <tr>
-              <td>Casanare</td>
-              <td>684.606</td>
-              <td>496.505</td>
-              <td>72,52 %</td>
-              <td>53,46 %</td>
-              <td>228.976</td>
-              <td>51,8 %</td>
-            </tr>
-          
-            <tr>
-              <td>Chocó</td>
-              <td>510.852</td>
-              <td>319.356</td>
-              <td>62,51 %</td>
-              <td>24,55 %</td>
-              <td>171.022</td>
-              <td>30,9 %</td>
-            </tr>
-          
-            <tr>
-              <td>Caquetá</td>
-              <td>505.526</td>
-              <td>373.501</td>
-              <td>73,88 %</td>
-              <td>43,5 %</td>
-              <td>168.342</td>
-              <td>40,15 %</td>
-            </tr>
-          
-            <tr>
-              <td>Arauca</td>
-              <td>405.457</td>
-              <td>282.379</td>
-              <td>69,64 %</td>
-              <td>44,42 %</td>
-              <td>135.695</td>
-              <td>44,49 %</td>
-            </tr>
-          
-            <tr>
-              <td>Putumayo</td>
-              <td>366.055</td>
-              <td>266.205</td>
-              <td>72,72 %</td>
-              <td>32,32 %</td>
-              <td>130.299</td>
-              <td>35,31 %</td>
-            </tr>
-          
-            <tr>
-              <td>Amazonas</td>
-              <td>145.842</td>
-              <td>85.573</td>
-              <td>58,68 %</td>
-              <td>49,58 %</td>
-              <td>41.199</td>
-              <td>50,2 %</td>
-            </tr>
-          
-            <tr>
-              <td>San Andrés Y Providencia</td>
-              <td>137.703</td>
-              <td>93.483</td>
-              <td>67,89 %</td>
-              <td>74,82 %</td>
-              <td>36.726</td>
-              <td>56,3 %</td>
-            </tr>
-          
-            <tr>
-              <td>Guaviare</td>
-              <td>109.840</td>
-              <td>82.190</td>
-              <td>74,83 %</td>
-              <td>41,05 %</td>
-              <td>40.593</td>
-              <td>44,93 %</td>
-            </tr>
-          
-            <tr>
-              <td>Vichada</td>
-              <td>105.064</td>
-              <td>34.008</td>
-              <td>32,37 %</td>
-              <td>15,51 %</td>
-              <td>15.282</td>
-              <td>13,2 %</td>
-            </tr>
-          
-            <tr>
-              <td>Guainía</td>
-              <td>60.040</td>
-              <td>36.174</td>
-              <td>60,25 %</td>
-              <td>34,76 %</td>
-              <td>15.593</td>
-              <td>29,95 %</td>
-            </tr>
-          
-            <tr>
-              <td>Vaupés</td>
-              <td>46.439</td>
-              <td>24.246</td>
-              <td>52,21 %</td>
-              <td>24,88 %</td>
-              <td>10.060</td>
-              <td>20,56 %</td>
-            </tr>
-          
-            <tr>
-              <td>Otros</td>
-              <td>7.705.767</td>
-              <td>4.610.835</td>
-              <td>59,84 %</td>
-              <td>51,16 %</td>
-              <td>5.755.290</td>
-              <td>56,1 %</td>
-            </tr>
+            
+        <tr>
+          <td>Bogotá</td>
+          <td>14.817.222</td>
+          <td>10.880.566</td>
+          <td>73,43 %</td>
+          <td>64,66 %</td>
+          <td>4.843.666</td>
+          <td>61,3 %</td>
+        </tr>
+      
+        <tr>
+          <td>Antioquia</td>
+          <td>11.746.999</td>
+          <td>6.854.242</td>
+          <td>58,35 %</td>
+          <td>49,97 %</td>
+          <td>3.125.645</td>
+          <td>45,38 %</td>
+        </tr>
+      
+        <tr>
+          <td>Valle Del Cauca</td>
+          <td>7.014.205</td>
+          <td>4.335.043</td>
+          <td>61,8 %</td>
+          <td>48,64 %</td>
+          <td>1.990.075</td>
+          <td>43,36 %</td>
+        </tr>
+      
+        <tr>
+          <td>Cundinamarca</td>
+          <td>4.888.257</td>
+          <td>2.523.683</td>
+          <td>51,63 %</td>
+          <td>36,92 %</td>
+          <td>1.121.295</td>
+          <td>32,24 %</td>
+        </tr>
+      
+        <tr>
+          <td>Santander</td>
+          <td>3.836.943</td>
+          <td>2.823.424</td>
+          <td>73,59 %</td>
+          <td>57,31 %</td>
+          <td>1.255.384</td>
+          <td>54,02 %</td>
+        </tr>
+      
+        <tr>
+          <td>Córdoba</td>
+          <td>2.679.284</td>
+          <td>1.587.990</td>
+          <td>59,27 %</td>
+          <td>44,54 %</td>
+          <td>708.232</td>
+          <td>38,15 %</td>
+        </tr>
+      
+        <tr>
+          <td>Norte De Santander</td>
+          <td>2.531.301</td>
+          <td>1.731.057</td>
+          <td>68,39 %</td>
+          <td>50,13 %</td>
+          <td>777.175</td>
+          <td>47,07 %</td>
+        </tr>
+      
+        <tr>
+          <td>Tolima</td>
+          <td>2.447.524</td>
+          <td>1.616.577</td>
+          <td>66,05 %</td>
+          <td>58,35 %</td>
+          <td>711.184</td>
+          <td>52,8 %</td>
+        </tr>
+      
+        <tr>
+          <td>Nariño</td>
+          <td>2.274.383</td>
+          <td>1.796.558</td>
+          <td>78,99 %</td>
+          <td>51,45 %</td>
+          <td>808.713</td>
+          <td>49,64 %</td>
+        </tr>
+      
+        <tr>
+          <td>Boyacá</td>
+          <td>2.230.333</td>
+          <td>1.669.026</td>
+          <td>74,83 %</td>
+          <td>59,98 %</td>
+          <td>800.861</td>
+          <td>63,58 %</td>
+        </tr>
+      
+        <tr>
+          <td>Atlántico</td>
+          <td>1.978.551</td>
+          <td>1.194.089</td>
+          <td>60,35 %</td>
+          <td>52,58 %</td>
+          <td>1.257.129</td>
+          <td>44,83 %</td>
+        </tr>
+      
+        <tr>
+          <td>Caldas</td>
+          <td>1.906.509</td>
+          <td>1.124.927</td>
+          <td>59 %</td>
+          <td>54,23 %</td>
+          <td>472.006</td>
+          <td>45,54 %</td>
+        </tr>
+      
+        <tr>
+          <td>Cesar</td>
+          <td>1.893.903</td>
+          <td>1.168.249</td>
+          <td>61,68 %</td>
+          <td>42,65 %</td>
+          <td>529.158</td>
+          <td>39,44 %</td>
+        </tr>
+      
+        <tr>
+          <td>Risaralda</td>
+          <td>1.752.333</td>
+          <td>1.152.548</td>
+          <td>65,77 %</td>
+          <td>54,37 %</td>
+          <td>529.984</td>
+          <td>54,2 %</td>
+        </tr>
+      
+        <tr>
+          <td>Huila</td>
+          <td>1.717.370</td>
+          <td>1.248.906</td>
+          <td>72,72 %</td>
+          <td>55,98 %</td>
+          <td>538.370</td>
+          <td>47,19 %</td>
+        </tr>
+      
+        <tr>
+          <td>Cauca</td>
+          <td>1.633.193</td>
+          <td>1.165.405</td>
+          <td>71,36 %</td>
+          <td>36,09 %</td>
+          <td>525.771</td>
+          <td>34,68 %</td>
+        </tr>
+      
+        <tr>
+          <td>Meta</td>
+          <td>1.562.968</td>
+          <td>1.025.035</td>
+          <td>65,58 %</td>
+          <td>44,99 %</td>
+          <td>469.505</td>
+          <td>43,44 %</td>
+        </tr>
+      
+        <tr>
+          <td>Sucre</td>
+          <td>1.444.326</td>
+          <td>720.628</td>
+          <td>49,89 %</td>
+          <td>38,2 %</td>
+          <td>329.510</td>
+          <td>33,89 %</td>
+        </tr>
+      
+        <tr>
+          <td>Magdalena</td>
+          <td>1.285.210</td>
+          <td>680.241</td>
+          <td>52,93 %</td>
+          <td>43,42 %</td>
+          <td>545.367</td>
+          <td>37,27 %</td>
+        </tr>
+      
+        <tr>
+          <td>La Guajira</td>
+          <td>1.209.920</td>
+          <td>461.378</td>
+          <td>38,13 %</td>
+          <td>21,71 %</td>
+          <td>221.718</td>
+          <td>22,12 %</td>
+        </tr>
+      
+        <tr>
+          <td>Quindío</td>
+          <td>1.157.949</td>
+          <td>754.693</td>
+          <td>65,17 %</td>
+          <td>61,87 %</td>
+          <td>327.915</td>
+          <td>57,57 %</td>
+        </tr>
+      
+        <tr>
+          <td>Casanare</td>
+          <td>684.606</td>
+          <td>497.412</td>
+          <td>72,66 %</td>
+          <td>53,51 %</td>
+          <td>229.351</td>
+          <td>51,88 %</td>
+        </tr>
+      
+        <tr>
+          <td>Chocó</td>
+          <td>510.852</td>
+          <td>320.073</td>
+          <td>62,65 %</td>
+          <td>24,61 %</td>
+          <td>171.268</td>
+          <td>30,94 %</td>
+        </tr>
+      
+        <tr>
+          <td>Caquetá</td>
+          <td>505.526</td>
+          <td>374.584</td>
+          <td>74,1 %</td>
+          <td>43,56 %</td>
+          <td>168.848</td>
+          <td>40,27 %</td>
+        </tr>
+      
+        <tr>
+          <td>Arauca</td>
+          <td>405.457</td>
+          <td>282.962</td>
+          <td>69,79 %</td>
+          <td>44,46 %</td>
+          <td>135.942</td>
+          <td>44,57 %</td>
+        </tr>
+      
+        <tr>
+          <td>Putumayo</td>
+          <td>366.055</td>
+          <td>267.069</td>
+          <td>72,96 %</td>
+          <td>32,4 %</td>
+          <td>130.661</td>
+          <td>35,4 %</td>
+        </tr>
+      
+        <tr>
+          <td>Amazonas</td>
+          <td>145.842</td>
+          <td>85.663</td>
+          <td>58,74 %</td>
+          <td>49,59 %</td>
+          <td>41.266</td>
+          <td>50,28 %</td>
+        </tr>
+      
+        <tr>
+          <td>San Andrés Y Providencia</td>
+          <td>137.703</td>
+          <td>93.903</td>
+          <td>68,19 %</td>
+          <td>74,92 %</td>
+          <td>36.794</td>
+          <td>56,41 %</td>
+        </tr>
+      
+        <tr>
+          <td>Guaviare</td>
+          <td>109.840</td>
+          <td>82.426</td>
+          <td>75,04 %</td>
+          <td>41,11 %</td>
+          <td>40.701</td>
+          <td>45,04 %</td>
+        </tr>
+      
+        <tr>
+          <td>Vichada</td>
+          <td>105.064</td>
+          <td>34.051</td>
+          <td>32,41 %</td>
+          <td>15,53 %</td>
+          <td>15.304</td>
+          <td>13,22 %</td>
+        </tr>
+      
+        <tr>
+          <td>Guainía</td>
+          <td>60.040</td>
+          <td>36.295</td>
+          <td>60,45 %</td>
+          <td>34,86 %</td>
+          <td>15.642</td>
+          <td>30,05 %</td>
+        </tr>
+      
+        <tr>
+          <td>Vaupés</td>
+          <td>46.439</td>
+          <td>24.253</td>
+          <td>52,23 %</td>
+          <td>24,89 %</td>
+          <td>10.063</td>
+          <td>20,57 %</td>
+        </tr>
+      
+        <tr>
+          <td>Otros</td>
+          <td>7.705.767</td>
+          <td>4.625.051</td>
+          <td>60,02 %</td>
+          <td>51,31 %</td>
+          <td>5.767.836</td>
+          <td>56,18 %</td>
+        </tr>
+      
           </tbody>
         </table>
       </section>
     </main>
-    <footer id="footer">
-      <section class="autores">
-        <h3>Autores</h3>
-        <ul>
-          <li>Luis Angel Parra Meza</li>
-          <li>Jhon E. Campo Ladeuth</li>
-          <li>Andres Felipe Burgos</li>
-        </ul>
-      </section>
-      <section class="info">
-        <h3>Información</h3>
-        <p>Pagina para el adelanto del proyecto 40% HTML5 y CSS3</p>
-      </section>
-    </footer>
-  </body>
+<footer id="footer">
+<section class="autores">
+  <h3>Autores</h3>
+  <ul>
+    <li>Luis Angel Parra Meza</li>
+    <li>Jhon E. Campo Ladeuth</li>
+    <li>Andres Felipe Burgos</li>
+  </ul>
+</section>
+<section class="info">
+  <h3>Información</h3>
+  <p>Pagina para el adelanto del proyecto 40% HTML5 y CSS3</p>
+</section>
+</footer>
+</body>
 </html>
+
+  
