@@ -8,6 +8,8 @@ body {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  background-image: radial-gradient(#0010ee 1px,transparent 0),radial-gradient(#33b921 1px,#fefefe 0);
+  background-size: 40px 40px;
 }
 * {
   box-sizing: border-box;

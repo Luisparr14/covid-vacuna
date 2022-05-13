@@ -1,5 +1,6 @@
 const $ = selector => document.querySelector(selector);
 const host = window.location.protocol + '//' + window.location.host;
+
 async function fetchData(url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -12,15 +13,12 @@ async function graficos() {
   let dataAsignadas = [];
   let dataAplicadas = [];
   infoAsignadasVsAplicadas.forEach((vacuna, index) => {
-    // if (index%2 === 0) {
     fields.push(new Date(vacuna.fecha).toLocaleDateString('es-CO'))
     dataAsignadas.push(vacuna.dosisAsignadas);
     dataAplicadas.push(vacuna.dosisAplicadas);
-    // }
   });
-  // Chart.defaults.global.defaultFontSize = 20;
   const ctx = document.getElementById('myChart').getContext('2d');
-  const myChart = new Chart(ctx, {
+  new Chart(ctx, {
     type: 'line',
     data: {
       labels: fields.map((label) => {
