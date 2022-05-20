@@ -1,7 +1,18 @@
 let switches = document.getElementsByName('switch');
 let slider = document.getElementById("slider");
 let html = document.querySelector('html');
-let schema = html.getAttribute('schema');
+let schema;
+
+if (localStorage.getItem('schema') === null) {
+  localStorage.setItem('schema', 'light-mode');
+  schema = localStorage.getItem('schema');
+  html.setAttribute('schema', schema);  
+  initSlider(slider, schema);
+}else{
+  schema = localStorage.getItem('schema');
+  html.setAttribute('schema', schema);
+  initSlider(slider, schema);
+}
 
 function changeColor(e) {
   e.preventDefault();
@@ -9,12 +20,20 @@ function changeColor(e) {
   schema = target.value;
   slider.style = 'transform: translateX(' + target.dataset.location + ')'
   html.setAttribute('schema', schema);
+  localStorage.setItem('schema', schema);
   if(typeof(myChart) !== 'undefined') {
     myChart.destroy();
     graficos();
   }
 }
-
 switches.forEach(item =>{
   item.addEventListener('change', changeColor)
 })
+
+function initSlider(slider, schema) {
+  if(schema==='light-mode'){
+    slider.style = 'transform: translateX(0)'
+  }else{
+    slider.style = 'transform: translateX(100%)'
+  }
+}

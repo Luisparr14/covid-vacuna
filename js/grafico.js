@@ -100,7 +100,7 @@ async function graficos() {
         },
         legend:{
           labels:{
-            color: schema === 'ligth-mode' ? '#000' : '#fff',
+            color: schema === 'light-mode' ? '#000' : '#fff',
             fullSize: true,
           }
         }
@@ -113,7 +113,7 @@ async function graficos() {
                 size: 13,
                 family: 'Cascadia Code PL, Arial, sans-serif',
               },
-              color: schema === 'ligth-mode' ? '#000' : '#fff',
+              color: schema === 'light-mode' ? '#000' : '#fff',
               maxRotation: 90,
               maxTicksLimit: 30,
             }
@@ -126,7 +126,7 @@ async function graficos() {
                 size: 13,
                 family: 'Cascadia Code PL, Arial, sans-serif',
               },
-              color: schema === 'ligth-mode' ? '#000' : '#fff',
+              color: schema === 'light-mode' ? '#000' : '#fff',
               maxRotation: 15,
               maxTicksLimit: 10,
             }
