@@ -77,7 +77,8 @@ ul li {
   overflow: hidden;
   transition: height 0.5s;
   height: 0;
-  z-index: 1000000;
+  z-index: 10000;
+  background-color: #91b3d1;
 }
 
 .menu li {
@@ -233,5 +234,9 @@ html[schema="dark-mode"] table tr:nth-child(2n){
 }
 
 html[schema="dark-mode"] table tr{
+  background-color: #000;
+}
+
+html[schema="dark-mode"] .menu{
   background-color: #000;
 }
