@@ -37,3 +37,14 @@ function initSlider(slider, schema) {
     slider.style = 'transform: translateX(100%)'
   }
 }
+
+let colorSwitch = document.getElementsByClassName('color_switch')[0];
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  console.log(scrollTop);
+  if (scrollTop > 60){
+    colorSwitch.style = 'top: 5px'
+  }else{
+    colorSwitch.style = 'top: 76px'
+  }
+})

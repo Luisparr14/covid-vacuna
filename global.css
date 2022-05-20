@@ -170,6 +170,7 @@ footer ul {
   position: fixed;
   top: 76px;
   z-index: 100;
+  transition: top 0.2s;
 }
 
 #slider {
