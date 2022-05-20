@@ -1,6 +1,6 @@
 const $ = selector => document.querySelector(selector);
 const host = window.location.protocol + '//' + window.location.host;
-
+console.log(schema);
 async function fetchData(url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -18,7 +18,7 @@ async function graficos() {
     dataAplicadas.push(vacuna.dosisAplicadas);
   });
   const ctx = document.getElementById('myChart').getContext('2d');
-  new Chart(ctx, {
+  myChart= new Chart(ctx, {
     type: 'line',
     data: {
       labels: fields.map((label) => {
@@ -26,6 +26,7 @@ async function graficos() {
       }),
       datasets: [{
         label: 'Dosis aplicadas',
+        color: '#fff',
         data: dataAplicadas,
         fill: true,
         backgroundColor: [
@@ -34,7 +35,7 @@ async function graficos() {
         borderColor: [
           'rgba(255, 255, 255, 1)'
         ],
-        borderWidth: 2
+        borderWidth: 1
       }, {
         label: 'Dosis asignadas',
         fill: true,
@@ -44,9 +45,9 @@ async function graficos() {
           'rgb(7, 56, 235, 0.5)'
         ],
         borderColor: [
-          'rgba(0, 0, 0, 1)'
+          'rgba(200, 130, 130, 1)'
         ],
-        borderWidth: 2
+        borderWidth: 1
       }]
     },
     options: {
@@ -96,31 +97,38 @@ async function graficos() {
               return `Fecha ${fecha.toLocaleDateString('es-CO')}`;
             }            
           }
+        },
+        legend:{
+          labels:{
+            color: schema === 'ligth-mode' ? '#000' : '#fff',
+            fullSize: true,
+          }
         }
       },
-      scales: {
-          myScale: {
-            type: 'linear',
-            position: 'right',
-            ticks: {
-              beginAtZero: true,
-              font:{
-                weight: 'bold',
-                family: 'Cascadia Code PL, Arial, sans-serif',              
-              }
-            },
-            grid : {
-              display: 1,
-            }
-          },
+      scales: {          
           x:{
             ticks: {
               font:{
                 weight: 'bold',
                 size: 13,
+                family: 'Cascadia Code PL, Arial, sans-serif',
               },
+              color: schema === 'ligth-mode' ? '#000' : '#fff',
               maxRotation: 90,
               maxTicksLimit: 30,
+            }
+          },
+          y:{
+            position: 'right',
+            ticks: {
+              font:{
+                weight: 'bold',
+                size: 13,
+                family: 'Cascadia Code PL, Arial, sans-serif',
+              },
+              color: schema === 'ligth-mode' ? '#000' : '#fff',
+              maxRotation: 15,
+              maxTicksLimit: 10,
             }
           }
       }

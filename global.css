@@ -71,7 +71,6 @@ ul li {
   position: absolute;
   flex-direction: column;
   width: 100%;
-  background-color: #91b3d1;
   top: 60px;
   justify-content: flex-start;
   align-items: center;
@@ -144,7 +143,6 @@ footer ul {
     flex-direction: row;
     margin: 0;
     width: initial;
-    background-color: #91b3d1;
     padding: 0px;
     height: initial;    
   }
@@ -156,4 +154,84 @@ footer ul {
     flex-direction: row;
     padding: 10px;
   }
+}
+
+/* Switch Mode Color */
+.color_switch{
+  align-items: center;
+  border: 1px solid #000;
+  background: #fefefe;
+  border-radius: 5000px;
+  display: flex;
+  height: 26px;
+  left: 32px;
+  overflow: hidden;
+  position: fixed;
+  top: 76px;
+  z-index: 100;
+}
+
+#slider {
+  background-color: #2c7cdc;
+  bottom: 0;
+  display: block;
+  left:0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s;
+  width: 50%;
+}
+
+.color_switch label{
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 26px;
+  padding: 0 8px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.color_switch label[data-checked="true"]{
+  opacity: 1;
+}
+
+.color_switch input[type="radio"]{
+  display: none;
+}
+/* Dark Mode - NavBar */
+html[schema="dark-mode"] #navbar{
+  background-color: rgb(35, 31, 31);
+}
+
+html[schema="dark-mode"] #navbar a{
+  color: #fff;
+}
+
+/* Dark Mode - Index */
+html[schema="dark-mode"] .card{
+  background-color: #000;
+  border: 1px solid #fff;
+}
+html[schema="dark-mode"] span{
+  color: #fff;
+}
+/* Dark Mode - Table */
+html[schema="dark-mode"] body{
+  background-image: radial-gradient(#0010ee 1px,#0000 0),radial-gradient(#33b921 1px,#000000 0) !important;
+  color: rgb(255, 255, 255);
+}
+html[schema="dark-mode"] table td, html[schema="dark-mode"] table th{
+  color: #fff;
+  border-right: 2px solid #222
+}
+html[schema="dark-mode"] #departament_info{
+  border: 2px solid #fafafa;
+}
+html[schema="dark-mode"] table tr:nth-child(2n){
+  background-color: #555;
+}
+
+html[schema="dark-mode"] table tr{
+  background-color: #000;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" schema="ligth-mode">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,10 +15,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script defer src="./js/color-mode.js"></script>
     <script defer src="./js/grafico.js"></script>
     <script defer src="./js/navbar.js"></script>
   </head>
   <body>
+    <section class="color_switch">
+      <div id="slider"></div>
+      <label data-checked="true" title="Usar Tema claro">
+        <input
+          name="switch"
+          type="radio"
+          data-location="0"
+          value="ligth-mode"
+        />
+        <span role="img">🌞</span>
+      </label>
+      <label data-checked="false" title="Usar Tema oscuro">
+        <input
+          name="switch"
+          type="radio"
+          data-location="calc(100%)"
+          value="dark-mode"
+        />
+        <span role="img">🌚</span>
+      </label>
+    </section>
     <nav id="navbar">
       <a id="logo" href="index.html"> Vacuna COVID-19 </a>
       <ul class="menu">
@@ -56,7 +78,7 @@
       </section>
       <section class="info">
         <h3>Información</h3>
-        <p>Pagina para el adelanto del proyecto 40% HTML5 y CSS3</p>
+        <p>Pagina para el Proyecto de Desarrollo Web</p>
       </section>
     </footer>
   </body>
