@@ -4,21 +4,29 @@ async function fetchData(url) {
   return data;
 }
 
-const generateTabla = async () => {
+const formatNumber = (number, percent = false) => {
+  if (percent) {
+    return Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(number);
+  } else {
+    return Intl.NumberFormat('es-Co').format(number);
+  }
+}
+
+const generateTable = async () => {
   const tbody = document.querySelector('#tbody');
   const infoVacunas = await fetchData('./data/vacunas.json');
   let filas = '';
   infoVacunas.forEach((vacuna) => {
     let departamento = vacuna.departamento;
-    let dosisAsignadas = Intl.NumberFormat('es-Co').format(vacuna.dosisAsignadas);
-    let dosisAplicadas = Intl.NumberFormat('es-Co').format(vacuna.dosisAplicadas.total);
+    let dosisAsignadas = formatNumber(vacuna.dosisAsignadas);
+    let dosisAplicadas = formatNumber(vacuna.dosisAplicadas.total);
     let porcentajeEntregadas = (vacuna.dosisAplicadas.total) / vacuna.dosisAsignadas;
-    porcentajeEntregadas = Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(porcentajeEntregadas);
+    porcentajeEntregadas = formatNumber(porcentajeEntregadas, true);
     let poblacionPrimeraDosis = (parseFloat(vacuna.cobertura.primeraDosis));
-    poblacionPrimeraDosis = Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(poblacionPrimeraDosis);
-    let pautaCompleta = Intl.NumberFormat('es-CO').format(vacuna.pautaCompleta);
-    let totalmenteVacunada = Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(vacuna.cobertura.esquemaCompleto);
-    
+    poblacionPrimeraDosis = formatNumber(poblacionPrimeraDosis, true);
+    let pautaCompleta = formatNumber(vacuna.pautaCompleta);
+    let totalmenteVacunada = formatNumber(vacuna.cobertura.esquemaCompleto, true);
+
     filas += `
         <tr>
           <td>${departamento}</td>
@@ -30,7 +38,8 @@ const generateTabla = async () => {
           <td>${totalmenteVacunada}</td>
         </tr>
       `;
-  });  
+  });
+
   tbody.innerHTML = filas;
 }
 
@@ -48,4 +57,4 @@ window.addEventListener('scroll', () => {
   }
 })
 
-generateTabla();
+generateTable();

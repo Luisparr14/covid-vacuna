@@ -4,39 +4,50 @@ async function fetchData(url) {
   return data;
 }
 
+const formatNumber = (number, percent = false) => {
+  if (percent) {
+    return Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(number);
+  } else {
+    return Intl.NumberFormat('es-Co').format(number);
+  }
+}
+
 const generateIndexPage = async () => {
+  
   const infoVacunas = await fetchData('./data/vacunas.json');
   const infoLabs = await fetchData('./data/laboratorios.json');
   const cardContianer = document.querySelector('#general_info');
+
   let dosisDistribuidas = infoVacunas.reduce((acc, vacuna) => {
     return acc + vacuna.dosisAsignadas;
   }, 0);
-  
+
   let dosisAplicadas = infoVacunas.reduce((acc, vacuna) => {
     return acc + vacuna.dosisAplicadas.total;
   }, 0);
-  
+
   let porcentajeEntregadas = (dosisAplicadas) / dosisDistribuidas;
-  
+
   let personasUnaDosis = infoVacunas.reduce((acc, vacuna) => {
     return acc + vacuna.primeraDosis;
   }, 0);
-  
+
   let personasConEsquemaCompleto = infoVacunas.reduce((acc, vacuna) => {
     return acc + vacuna.pautaCompleta;
   }, 0);
-  
+
   let porcentajeAdministradas = (personasConEsquemaCompleto) / dosisAplicadas;
 
 
-  personasUnaDosis = Intl.NumberFormat('es-CO').format(personasUnaDosis);
-  personasConEsquemaCompleto = Intl.NumberFormat('es-CO').format(personasConEsquemaCompleto);
-  dosisDistribuidas = Intl.NumberFormat('es-Co').format(dosisDistribuidas);
-  dosisAplicadas = Intl.NumberFormat('es-Co').format(dosisAplicadas);
-  porcentajeEntregadas = Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(porcentajeEntregadas);
-  porcentajeAdministradas = Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 2 }).format(porcentajeAdministradas);
+  personasUnaDosis = formatNumber(personasUnaDosis);
+  personasConEsquemaCompleto = formatNumber(personasConEsquemaCompleto);
+  dosisDistribuidas = formatNumber(dosisDistribuidas);
+  dosisAplicadas = formatNumber(dosisAplicadas);
+  porcentajeEntregadas = formatNumber(porcentajeEntregadas, true);
+  porcentajeAdministradas = formatNumber(porcentajeAdministradas, true);
 
   let smalls = ``
+
   infoLabs.forEach((lab) => {
     let labDosis = Intl.NumberFormat('es-Co').format(lab.dosisAsignadas);
     smalls += `
@@ -75,6 +86,7 @@ const generateIndexPage = async () => {
         <h4>${personasUnaDosis}</h4>
       </section>
     </div>`;
+
   const htmlCard3 = `
     <div class="card" data-aos="fade-left">
       <section class="body_card">
@@ -86,12 +98,17 @@ const generateIndexPage = async () => {
         </div>
       </section>
     </div>`;
+
   let cards = htmlCard1 + htmlCard2 + htmlCard3;
+
   cardContianer.innerHTML = cards;
+
+
   AOS.init({
     duration: 800,
     easing: 'ease-in-out',
     once: true
   });
 }
+
 generateIndexPage();
