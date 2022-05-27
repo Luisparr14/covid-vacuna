@@ -2,9 +2,8 @@
   "name": "proyecto-desarrollo-web",
   "version": "1.0.0",
   "description": "Informacion sobre el proceso de vacunación contra el covid-19 en Colombia",
-  "main": "index.js",
   "scripts": {
-    "test": "jest index.js"
+    "test": "echo \" Esto es una prueba\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -18,8 +17,5 @@
   ],
   "author": "Luis Angel PM",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Luisparr14/covid-vacuna/issues"
-  },
-  "homepage": "https://github.com/Luisparr14/covid-vacuna#readme"
+  "homepage": "https://github.com/Luisparr14/covid-vacuna"
 }
