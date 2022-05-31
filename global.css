@@ -239,5 +239,6 @@ html[schema="dark-mode"] table tr{
 }
 
 html[schema="dark-mode"] .menu{
-  background-color: #000;
+  background-color: #231f1f;
 }
+
